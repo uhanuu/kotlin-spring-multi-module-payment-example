@@ -6,5 +6,5 @@ include(
     "pay-core",
     "payment-service",
     "ledger-service",
-    "wallet-service"
+    "wallet-service",
 )

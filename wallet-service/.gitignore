@@ -1,7 +1,15 @@
 HELP.md
-.gradle
+
+# Gradle
+.gradle/
 build/
-!gradle/wrapper/gradle-wrapper.jar
+!gradle-wrapper.jar
+.gradle/cache/
+.gradle/daemon/
+.gradle/workspace/
+.gradle/buildOutputCleanup/
+!gradlew
+!gradlew.bat
 !**/src/main/**/build/
 !**/src/test/**/build/
 
@@ -32,6 +40,31 @@ out/
 /dist/
 /nbdist/
 /.nb-gradle/
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+log/
+
+# Spring Boot
+logs/
+*.log
+
+# 환경 파일
+application.yml
+application-*.yml
+application.properties
+application-*.properties
+.env
+
+# OS 및 IDE
+.DS_Store
+Thumbs.db
+
+# Java
+*.class
 
 ### VS Code ###
 .vscode/

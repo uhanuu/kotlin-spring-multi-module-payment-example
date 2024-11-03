@@ -10,7 +10,7 @@ import reactor.core.publisher.Mono
 import study.paymentservice.common.WebAdapter
 import study.paymentservice.payment.adapter.`in`.web.request.TossPaymentConfirmRequest
 import study.paymentservice.payment.adapter.`in`.web.response.ApiResponse
-import study.paymentservice.payment.adapter.out.web.executor.TossPaymentExecutor
+import study.paymentservice.payment.adapter.out.web.toss.executor.TossPaymentExecutor
 
 @WebAdapter
 @RequestMapping("/v1/toss")

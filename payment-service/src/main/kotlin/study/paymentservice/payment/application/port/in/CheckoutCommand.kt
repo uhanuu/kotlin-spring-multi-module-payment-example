@@ -1,6 +1,6 @@
 package study.paymentservice.payment.application.port.`in`
 
-data class CheckoutCommend(
+data class CheckoutCommand(
     val cartId: Long,
     val buyerId: Long,
     val productIds: List<Long>,

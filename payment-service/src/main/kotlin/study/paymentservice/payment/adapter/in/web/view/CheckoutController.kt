@@ -7,7 +7,7 @@ import reactor.core.publisher.Mono
 import study.paymentservice.common.IdempotencyCreator
 import study.paymentservice.common.WebAdapter
 import study.paymentservice.payment.adapter.`in`.web.request.CheckoutRequest
-import study.paymentservice.payment.application.port.`in`.CheckoutCommend
+import study.paymentservice.payment.application.port.`in`.CheckoutCommand
 import study.paymentservice.payment.application.port.`in`.CheckoutUseCase
 
 @Controller
@@ -18,7 +18,7 @@ class CheckoutController(
 
     @GetMapping("/")
     fun checkout(request: CheckoutRequest, model: Model): Mono<String> {
-        val command = CheckoutCommend(
+        val command = CheckoutCommand(
             cartId = request.cartId,
             buyerId = request.buyerId,
             productIds = request.productIds,

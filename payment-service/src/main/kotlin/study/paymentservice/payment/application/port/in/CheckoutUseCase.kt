@@ -5,5 +5,5 @@ import study.paymentservice.payment.domain.CheckoutResult
 
 interface CheckoutUseCase {
 
-    fun checkout(command: CheckoutCommend): Mono<CheckoutResult>
+    fun checkout(command: CheckoutCommand): Mono<CheckoutResult>
 }

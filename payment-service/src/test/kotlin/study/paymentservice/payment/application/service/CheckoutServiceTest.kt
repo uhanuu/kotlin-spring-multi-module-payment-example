@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.context.annotation.Import
 import org.springframework.dao.DataIntegrityViolationException
 import reactor.test.StepVerifier
-import study.paymentservice.payment.application.port.`in`.CheckoutCommend
+import study.paymentservice.payment.application.port.`in`.CheckoutCommand
 import study.paymentservice.payment.application.port.`in`.CheckoutUseCase
 import study.paymentservice.payment.helper.PaymentDatabaseHelper
 import study.paymentservice.payment.helper.PaymentTestConfiguration
@@ -31,7 +31,7 @@ class CheckoutServiceTest(
     @Test
     fun `should save PaymentEvent and PaymentOrder successfully`() {
         val orderId = UUID.randomUUID().toString()
-        val checkoutCommand = CheckoutCommend(
+        val checkoutCommand = CheckoutCommand(
             cartId = 1,
             buyerId = 1,
             productIds = listOf(1, 2, 3),
@@ -57,7 +57,7 @@ class CheckoutServiceTest(
     @Test
     fun `should fail to save PaymentEvent and PaymentOrder when trying to save for the second time`() {
         val orderId = UUID.randomUUID().toString()
-        val checkoutCommand = CheckoutCommend(
+        val checkoutCommand = CheckoutCommand(
             cartId = 1,
             buyerId = 1,
             productIds = listOf(1, 2, 3),

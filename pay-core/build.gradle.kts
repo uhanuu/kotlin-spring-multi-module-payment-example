@@ -8,5 +8,6 @@ jar.enabled = true
 
 dependencies {
     //로그 의존성
+    api("org.springframework.boot:spring-boot-starter-web")
     api("io.github.microutils:kotlin-logging-jvm:2.0.11")
 }

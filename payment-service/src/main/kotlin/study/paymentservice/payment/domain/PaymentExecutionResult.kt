@@ -6,7 +6,7 @@ data class PaymentExecutionResult (
     val paymentKey: String,
     val orderId: String,
     val extraDetails: PaymentExtraDetails? = null, // 결제가 성공 혹은 실패했을 때만 받는 데이터
-    val failure: PaymentExecutionFailure? = null, // 결제가 성공 혹은 실패했을 때만 받는 데이터
+    val failure: PaymentFailure? = null, // 결제가 성공 혹은 실패했을 때만 받는 데이터
     val isSuccess: Boolean,
     val isFailure: Boolean,
     val isUnknown: Boolean,

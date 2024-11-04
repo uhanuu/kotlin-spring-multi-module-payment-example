@@ -2,7 +2,7 @@ package study.paymentservice.payment.application.port.out
 
 import study.paymentservice.payment.domain.PaymentExecutionResult
 import study.paymentservice.payment.domain.PaymentExtraDetails
-import study.paymentservice.payment.domain.PaymentExecutionFailure
+import study.paymentservice.payment.domain.PaymentFailure
 import study.paymentservice.payment.domain.PaymentStatus
 
 data class PaymentStatusUpdateCommand (
@@ -10,7 +10,7 @@ data class PaymentStatusUpdateCommand (
     val orderId: String,
     val status: PaymentStatus,
     val extraDetails: PaymentExtraDetails? = null,
-    val failure: PaymentExecutionFailure? = null
+    val failure: PaymentFailure? = null
 ) {
 
   constructor(paymentExecutionResult: PaymentExecutionResult) : this(

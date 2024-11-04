@@ -12,7 +12,7 @@ class PaymentExecutorWebAdapter (
     private val paymentExecutor: PaymentExecutor
 ) : PaymentExecutorPort {
     override fun execute(command: PaymentConfirmCommand): Mono<PaymentExecutionResult> {
-        return paymentExecutor.executor(command)
+        return paymentExecutor.execute(command)
     }
 }
 

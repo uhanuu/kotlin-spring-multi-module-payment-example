@@ -6,5 +6,5 @@ import study.paymentservice.payment.domain.PaymentExecutionResult
 
 interface PaymentExecutor {
 
-    fun executor(command: PaymentConfirmCommand): Mono<PaymentExecutionResult>
+    fun execute(command: PaymentConfirmCommand): Mono<PaymentExecutionResult>
 }
